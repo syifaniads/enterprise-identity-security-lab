@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" role="img" aria-labelledby="title desc">
+  <title id="title">Enterprise Identity Security Lab architecture</title>
+  <desc id="desc">Authoritative identity source flows through IGA policy and approvals to Active Directory and applications, with certification and PowerShell security automation.</desc>
+  <rect width="1200" height="430" fill="#0d1117"/>
+  <style>.b{fill:#161b22;stroke:#58a6ff;stroke-width:2;rx:14}.g{fill:#161b22;stroke:#3fb950;stroke-width:2;rx:14}.o{fill:#161b22;stroke:#d29922;stroke-width:2;rx:14}.t{fill:#f0f6fc;font:600 18px system-ui,-apple-system,Segoe UI,sans-serif}.s{fill:#8b949e;font:14px system-ui,-apple-system,Segoe UI,sans-serif}.l{stroke:#8b949e;stroke-width:3;fill:none;marker-end:url(#a)}</style>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#8b949e"/></marker></defs>
+  <text x="40" y="42" class="t">Identity lifecycle & security control plane</text>
+  <text x="40" y="67" class="s">Derived from retained CDA evidence plus clearly labeled 2026 portfolio extensions</text>
+  <rect x="45" y="125" width="190" height="90" class="b"/><text x="70" y="160" class="t">Identity Source</text><text x="70" y="185" class="s">JDBC / HR / student</text>
+  <rect x="300" y="125" width="190" height="90" class="b"/><text x="338" y="160" class="t">IGA / IIQ</text><text x="326" y="185" class="s">aggregate + correlate</text>
+  <rect x="555" y="125" width="190" height="90" class="o"/><text x="590" y="160" class="t">Policy / SoD</text><text x="583" y="185" class="s">approval + roles</text>
+  <rect x="810" y="95" width="170" height="90" class="g"/><text x="833" y="130" class="t">Active Directory</text><text x="850" y="155" class="s">accounts + groups</text>
+  <rect x="810" y="220" width="170" height="90" class="g"/><text x="842" y="255" class="t">Applications</text><text x="838" y="280" class="s">entitlements</text>
+  <rect x="1030" y="157" width="140" height="90" class="o"/><text x="1048" y="192" class="t">Audit</text><text x="1048" y="217" class="s">evidence / review</text>
+  <rect x="300" y="310" width="190" height="80" class="g"/><text x="325" y="342" class="t">PowerShell</text><text x="325" y="366" class="s">audit + provisioning</text>
+  <path d="M235 170 H300" class="l"/><path d="M490 170 H555" class="l"/><path d="M745 160 H810" class="l"/><path d="M745 190 C770 225 785 265 810 265" class="l"/><path d="M980 140 C1005 155 1010 175 1030 185" class="l"/><path d="M980 265 C1005 245 1010 225 1030 215" class="l"/><path d="M395 310 V240 C395 225 500 220 555 205" class="l"/>
+</svg>

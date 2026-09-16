@@ -1,0 +1,23 @@
+rules:
+  - id: SOD-001
+    description: Student identities must never receive privileged AD administration role.
+    conflict:
+      any_of:
+        - Student
+        - Alumni
+      with:
+        - Privileged-AD-Admin
+    action: block
+
+  - id: SOD-002
+    description: Requester must not self-approve privileged access.
+    condition: requested_role == "Privileged-AD-Admin"
+    action: require_independent_approver
+
+  - id: SOD-003
+    description: Emergency privileged access must be time-bound and retrospectively reviewed.
+    condition: access_type == "break_glass"
+    action:
+      - set_expiry
+      - create_review
+      - alert_security

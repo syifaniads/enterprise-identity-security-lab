@@ -1,0 +1,39 @@
+name: PowerShell Quality
+
+on:
+  push:
+    paths:
+      - '**/*.ps1'
+      - '.github/workflows/powershell-quality.yml'
+  pull_request:
+    paths:
+      - '**/*.ps1'
+      - '.github/workflows/powershell-quality.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install test modules
+        shell: pwsh
+        run: |
+          Set-PSRepository PSGallery -InstallationPolicy Trusted
+          Install-Module PSScriptAnalyzer -Scope CurrentUser -Force
+          Install-Module Pester -Scope CurrentUser -Force -MinimumVersion 5.0.0
+
+      - name: Static analysis
+        shell: pwsh
+        run: |
+          $results = Invoke-ScriptAnalyzer -Path ./active-directory -Recurse -Severity Error
+          $results | Format-Table -AutoSize
+          if ($results) { throw 'PSScriptAnalyzer reported error-severity findings.' }
+
+      - name: Pester
+        shell: pwsh
+        run: |
+          Invoke-Pester -Path ./tests -CI

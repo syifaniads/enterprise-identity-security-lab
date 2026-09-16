@@ -1,0 +1,3 @@
+username;firstname;lastname;initials;city;zipcode;country;company;state;streetaddress;telephone;email;jobtitle;department;ou
+ada.lovelace;Ada;Lovelace;AL;Malang;65100;ID;Example University;East Java;Lab Street 1;+6200000001;ada.lovelace@example.invalid;Student;Computer Science;OU=Students,OU=Lab,DC=lab,DC=example
+grace.hopper;Grace;Hopper;GH;Malang;65100;ID;Example University;East Java;Lab Street 2;+6200000002;grace.hopper@example.invalid;Faculty;Computer Science;OU=Faculty,OU=Lab,DC=lab,DC=example

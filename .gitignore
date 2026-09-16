@@ -1,0 +1,34 @@
+# Evidence and private artifacts
+*.pdf
+*.docx
+*.xlsx
+*.png
+*.jpg
+*.jpeg
+*.pcap
+*.pcapng
+
+# Generated operational outputs
+out/
+logs/
+*.log
+*snapshot*.json
+*inventory*.csv
+*report*.csv
+
+# Secrets / keys
+.env
+.env.*
+*.pfx
+*.p12
+*.pem
+*.key
+*.cer
+*.crt
+secrets/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

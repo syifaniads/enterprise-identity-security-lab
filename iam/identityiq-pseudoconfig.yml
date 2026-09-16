@@ -1,0 +1,45 @@
+# Portfolio-only pseudoconfiguration. Not deployable IdentityIQ XML.
+authoritative_source:
+  name: student_staging
+  type: jdbc
+  table: not_approved_students
+  immutable_key: person_id
+  attributes:
+    - person_id
+    - given_name
+    - family_name
+    - email
+    - department
+    - lifecycle_state
+    - leaving_date
+
+correlation:
+  primary: person_id
+  fallback_review_required:
+    - email
+
+birthright_roles:
+  student_active:
+    when:
+      lifecycle_state: active_student
+    targets:
+      active_directory:
+        ou: "OU=Students,OU=Lab,DC=lab,DC=example"
+        groups:
+          - LAB-Students
+
+leaver:
+  when:
+    lifecycle_state: alumni
+  actions:
+    - disable_interactive_access
+    - revoke_requestable_entitlements
+    - move_ad_object_to_alumni_ou
+    - preserve_audit_record
+    - reconcile_targets
+
+controls:
+  require_approval_for_privileged_access: true
+  evaluate_sod_before_provisioning: true
+  retry_requires_idempotent_connector_operation: true
+  certify_privileged_access: quarterly

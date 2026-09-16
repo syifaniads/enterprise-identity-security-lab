@@ -1,0 +1,7 @@
+role,population,birthright,requestable,example_entitlements,review_frequency
+Student,Active students,yes,no,LAB-Students,annual
+Faculty,Active faculty,yes,no,LAB-Faculty,annual
+Helpdesk,IT support,no,yes,Password-Reset-Operators,quarterly
+IAM-Operator,IAM operations,no,yes,Identity-Operations,quarterly
+Privileged-AD-Admin,Approved administrators,no,yes,LAB-Privileged-AD-Admins,quarterly
+Alumni,Former students,conditional,no,LAB-Alumni-Limited,annual
